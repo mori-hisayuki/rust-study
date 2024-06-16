@@ -4,7 +4,7 @@ services:
   rust-app:
     build:
       context: .
-      dockerfile: ./docker/rust/Dockerfile
+      dockerfile: ./rust/Dockerfile
     volumes:
       - .:/usr/src/rust-app
     ports:
