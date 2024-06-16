@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./rust/Dockerfile
     volumes:
-      - .:/usr/src/rust-app
+      - ..:/develop
     ports:
       - "8000:8000"
     stdin_open: true
