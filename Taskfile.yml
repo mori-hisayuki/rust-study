@@ -3,9 +3,6 @@ env:
   COMPOSE: docker-compose
 
 tasks:
-  sample:
-    cmds:
-      - echo "Hello, World!"
   setup:
     deps: [container-build, up]
     cmds:
