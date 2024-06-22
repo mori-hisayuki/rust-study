@@ -11,3 +11,8 @@ services:
       - "8000:8000"
     stdin_open: true
     tty: true
+  cargo:
+    image: rust:latest
+    working_dir: /develop
+    volumes:
+      - ..:/develop

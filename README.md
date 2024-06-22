@@ -1,5 +1,10 @@
 
 ## 環境構築
+[Taskfile](https://taskfile.dev/)のインストール
+### Mac
+```bash
+brew install go-task
+```
 
 ### docker
 起動
@@ -7,7 +12,7 @@
 docker-compose -f ./docker/compose.yml up --build
 ```
 
-コンテナ内に入る
+コンテナ内に入る雨酷いので、
 ```bash
 docker-compose -f ./docker/compose.yml exec rust-app bash
 ```

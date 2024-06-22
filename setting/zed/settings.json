@@ -44,5 +44,10 @@
       "tab_size": 2,
       "formatter": "language_server"
     }
+  },
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    }
   }
 }

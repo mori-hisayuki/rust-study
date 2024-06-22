@@ -1,0 +1,26 @@
+version: 3
+env:
+  COMPOSE: docker-compose
+
+tasks:
+  sample:
+    cmds:
+      - echo "Hello, World!"
+  setup:
+    deps: [container-build, up]
+    cmds:
+      - echo 'setup done'
+  container-build:
+    internal: true
+    cmd: $COMPOSE -f ./docker/compose.yml build
+  up:
+    internal: true
+    cmd: $COMPOSE -f ./docker/compose.yml up -d
+  down:
+    cmd: $COMPOSE -f ./docker/compose.yml down
+  # cargo run
+  run:
+    cmd: $COMPOSE -f ./docker/compose.yml run --rm cargo cargo run
+  # rust環境に入りたいときのみ
+  bash:
+    cmd: $COMPOSE -f ./docker/compose.yml exec rust-app bash
