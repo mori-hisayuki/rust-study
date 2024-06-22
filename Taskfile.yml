@@ -12,15 +12,15 @@ tasks:
       - echo 'setup done'
   container-build:
     internal: true
-    cmd: $COMPOSE -f ./docker/compose.yml build
+    cmd: $COMPOSE build
   up:
     internal: true
-    cmd: $COMPOSE -f ./docker/compose.yml up -d
+    cmd: $COMPOSE up -d
   down:
-    cmd: $COMPOSE -f ./docker/compose.yml down
+    cmd: $COMPOSE down
   # cargo run
   run:
-    cmd: $COMPOSE -f ./docker/compose.yml run --rm cargo cargo run
+    cmd: $COMPOSE run --rm cargo cargo run
   # rust環境に入りたいときのみ
   bash:
-    cmd: $COMPOSE -f ./docker/compose.yml exec rust-app bash
+    cmd: $COMPOSE exec rust-app bash

@@ -1,12 +1,10 @@
-version: "3.8"
-
 services:
   rust-app:
     build:
       context: .
-      dockerfile: ./rust/Dockerfile
+      dockerfile: ./docker/rust/Dockerfile
     volumes:
-      - ..:/develop
+      - .:/develop
     ports:
       - "8000:8000"
     stdin_open: true
@@ -15,4 +13,4 @@ services:
     image: rust:latest
     working_dir: /develop
     volumes:
-      - ..:/develop
+      - .:/develop
