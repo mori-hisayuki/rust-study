@@ -28,9 +28,28 @@ cargo_common_metadata = "allow"
 
 # nursery
 # https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=nursery
+# if ブロックと else ブロックに、ブロック外に移動できる共有コードが含まれているかどうかを確認します。
+branches_sharing_code = "deny"
+# 認知的複雑性の高いメソッドをチェックします。
+cognitive_complexity = 'warn'
+# 組み込みメソッドを使用して表現できる浮動小数点式を探します。
+imprecise_flops = "deny"
+# 共通のマクロが一貫した中括弧で使用されていることを確認します。
+nonstandard_macro_braces = "deny"
+
+option_if_let_else = "deny"
+
 
 # pedantic
 # https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=pedantic
+# ネストされていない or パターンをチェックします。
+unnested_or_patterns = "warn"
+# async として宣言されているが、内部に .await がない関数をチェックします。
+unused_async = "warn"
+# 自己引数を含むが使用されていないメソッドをチェックします
+unused_self = "warn"
+# コード内のどこかにサイズがゼロの値型を持つマップがないかチェックします。
+zero_sized_map_values = "warn"
 
 # restriction
 # https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=restriction
