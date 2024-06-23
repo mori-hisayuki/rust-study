@@ -65,5 +65,5 @@ name = "hello_world"
 path = "src/main.rs"
 
 [[bin]]
-name = "print_debug"
-path = "src/1_hello_world/print_debug.rs"
+name = "format_print"
+path = "src/1_hello_world/format_print.rs"
