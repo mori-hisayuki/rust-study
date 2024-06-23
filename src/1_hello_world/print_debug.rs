@@ -1,7 +1,5 @@
-struct Struture(i32)
+struct Struture(i32);
 
-struct Deep(Structure)
+struct Deep(Struture);
 
-fn main() {
-
-}
+fn main() {}

@@ -6,6 +6,41 @@ default-run = "hello_world"
 
 [dependencies]
 
+
+# Biomeの設定を引用
+# https://github.com/biomejs/biome/blob/main/Cargo.toml
+[workspace.lints.rust]
+absolute_paths_not_starting_with_crate = "warn"
+dead_code = "warn"
+trivial_numeric_casts = "warn"
+unused_import_braces = "warn"
+unused_lifetimes = "warn"
+unused_macro_rules = "warn"
+
+# Clippyの設定(Biomeの設定を引用)
+# https://github.com/biomejs/biome/blob/main/Cargo.toml
+[workspace.lints.clippy]
+
+# cargo
+# https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=cargo
+# すべての共通メタデータが Cargo.toml で定義されているかどうかを確認します。
+cargo_common_metadata = "allow"
+
+# nursery
+# https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=nursery
+
+# pedantic
+# https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=pedantic
+
+# restriction
+# https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=restriction
+# dbg の使用状況をチェックします。
+dbg_macro = "warn"
+
+# suspicious
+# https://rust-lang.github.io/rust-clippy/master/index.html#/?groups=suspicious
+
+
 [[bin]]
 name = "hello_world"
 path = "src/main.rs"
