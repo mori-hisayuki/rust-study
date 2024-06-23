@@ -2,5 +2,14 @@
 name = "rust-app"
 version = "0.1.0"
 edition = "2021"
+default-run = "hello_world"
 
 [dependencies]
+
+[[bin]]
+name = "hello_world"
+path = "src/main.rs"
+
+[[bin]]
+name = "print_debug"
+path = "src/1_hello_world/print_debug.rs"
