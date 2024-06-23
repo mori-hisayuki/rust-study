@@ -8,4 +8,8 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
+# 必要なコンポーネントをインストール
+RUN rustup update \
+    && rustup component add rustfmt clippy
+
 WORKDIR /develop
