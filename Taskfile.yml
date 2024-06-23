@@ -20,6 +20,8 @@ tasks:
     # CLI_ARGSはtaskfileの特殊変数
     # https://taskfile.dev/api/#special-variables
     cmd: $COMPOSE run --rm cargo cargo run $(if [ -n "{{.CLI_ARGS}}" ]; then echo --bin {{.CLI_ARGS}}; fi)
+  fmt:
+    cmd: $COMPOSE run --rm cargo cargo fmt
   # rust環境に入りたいときのみ
   bash:
     cmd: $COMPOSE exec rust-app bash
